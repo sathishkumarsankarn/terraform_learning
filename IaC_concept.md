@@ -7,7 +7,7 @@ Business -> Business Analyst -> Solution Architect -> Procurement Team -> Infras
 <img width="938" alt="traditional IT infrastructure and its challenges" src="https://github.com/sathishkumarsankarn/terraform_learning/assets/41965179/51d1d85a-d16c-4e28-9385-599616ac8203">
 
 # IaC Tools -
-  # Configuration management tools - Anisble, Puppet, saltstack
-  # Server Templation tools - Docker, Hashicop Packer, Vagrant
+  # Configuration management tools - Anisble, Chef, Puppet, saltstack
+  # Server Templating tools - Docker, Hashicop Packer, Vagrant
   # Provisiong Tools - Terraform, CloudFormation
 
