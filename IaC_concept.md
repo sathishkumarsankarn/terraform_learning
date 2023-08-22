@@ -14,7 +14,7 @@ Business -> Business Analyst -> Solution Architect -> Procurement Team -> Infras
 
 
 # CONFIGURATION MANAGEMENT TOOLS -
-  These are commonly used to install and manage software on existing infrastructure resources such as servers, databases, networking devices, etcetera.Unlike the ad hoc shell scripts that we saw earlier, configuration management tools maintain a consistent and standard structure of code, and this makes it easier to manage and update it as needed. They are also designed to run on multiple remote resources at once.
+    These are commonly used to install and manage software on existing infrastructure resources such as servers, databases, networking devices, etcetera.Unlike the ad hoc shell scripts that we saw earlier, configuration management tools maintain a consistent and standard structure of code, and this makes it easier to manage and update it as needed. They are also designed to run on multiple remote resources at once.
     # **idempotent** -> This means that you can run the code multiple times and every time you run it, it will only make changes that are necessary to bring the environment into a defined state. It would leave anything already in place as it is without us having to write any additional code.
 
 
