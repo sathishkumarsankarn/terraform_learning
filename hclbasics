@@ -28,3 +28,6 @@ Steps in terraform -->
   Run terraform init command
   Run terraform plan command
   Run terraform apply command
+
+terrform show --> it displays the resources created as part of terraform apply command
+
