@@ -21,3 +21,6 @@ Business -> Business Analyst -> Solution Architect -> Procurement Team -> Infras
 # SERVER TEMPLATING TOOLS -
     These are tools like Docker, Vagrant and Packer from Hashicorp that can be used to create a custom image of a virtual machine or a container.These images already contain all the required software and dependencies installed on them and for the most part, this eliminates the need of installing software after a VM or a container is deployed. The most common examples for server templated images are VM images such as those that are offered on OS boxes.
     Server templating tools also promote immutable infrastructure, unlike configuration management tools.This means that once the VM or a container is deployed, it is designed to remain unchanged.If there are changes to be made to the image instead of updating the running instance, like in the case of configuration management tools such as Ansible, we update the image and then redeploy a new instance using the updated image.
+
+# PROVISIONING TOOLS -
+    These tools are used to provision infrastructure components using a simple declarative code.These infrastructure components can range from servers such as virtual machines, databases, vpcs subnets,security groups, storage and just about any service based on the provider we choose.
