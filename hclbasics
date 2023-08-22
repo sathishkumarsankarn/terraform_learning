@@ -22,3 +22,9 @@ Explanation -->
   arguements --> filename, content
 
   Each resource type will have their own specific set of arguments.
+
+Steps in terraform --> 
+  write the configuration file
+  Run terraform init command
+  Run terraform plan command
+  Run terraform apply command
