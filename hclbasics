@@ -1,0 +1,24 @@
+# HCL - HashiCorp Configuraton Language
+
+syntax ->
+<block> <parameters>{
+  key1=value1
+  key2=value2
+}
+
+Example -->
+
+resource "local_file" "pet"{
+  filename = "/root/pets.txt"
+  content = "I hate pets"
+}
+
+Explanation -->
+  block name --> resource
+  resource type --> local_file
+    provider --> local
+    resource --> file
+  resource name --> pet
+  arguements --> filename, content
+
+  Each resource type will have their own specific set of arguments.
