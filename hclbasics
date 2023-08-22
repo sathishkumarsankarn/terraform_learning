@@ -31,3 +31,5 @@ Steps in terraform -->
 
 terrform show --> it displays the resources created as part of terraform apply command
 
+terraform destory --> it will delete the resource.
+
