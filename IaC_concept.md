@@ -11,3 +11,6 @@ Business -> Business Analyst -> Solution Architect -> Procurement Team -> Infras
   # Server Templating tools - Docker, Hashicop Packer, Vagrant
   # Provisiong Tools - Terraform, CloudFormation
 
+# CONFIGURATION MANAGEMENT TOOLS -
+  These are commonly used to install and manage software on existing infrastructure resources such as servers, databases, networking devices, etcetera.Unlike the ad hoc shell scripts that we saw earlier, configuration management tools maintain a consistent and standard structure of code, and this makes it easier to manage and update it as needed. They are also designed to run on multiple remote resources at once.
+
