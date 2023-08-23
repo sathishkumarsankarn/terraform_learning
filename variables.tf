@@ -54,3 +54,19 @@ variable "content" {
     "statement2" = "we have learned successfully about map type variable declaration"
   }
 }
+
+variable "length" {
+  type = map(number)
+  default = {
+    "dog" = 1
+    "cat" = 2
+  }
+}
+
+variable "content" {
+  type = map(string)
+  default = {
+    "statement1" = "We have variable with map type"
+    "statement2" = "we have learned successfully about map type variable declaration"
+  }
+}
