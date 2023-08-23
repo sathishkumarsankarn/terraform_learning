@@ -15,3 +15,11 @@ resource "local_file" "variable_concept" {
   filename = var.filename
   content = var.content
 }
+
+# accessing list and map variables here
+
+resource "random_pet" "my-pet" {
+  prefix = var.prefix[0]
+  separator = "."
+  length = var.length["dog"]
+}
