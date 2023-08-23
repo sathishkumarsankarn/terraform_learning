@@ -94,3 +94,11 @@ variable "kitty" {
   type = tuple([string, number, bool])
   default = ["cat", 1, true]
 }
+
+
+# Declaring variables without default values
+
+variable "filename" {
+}
+# passing value in during run time like below -->
+terraform apply -var filename="/root/sample.txt"
