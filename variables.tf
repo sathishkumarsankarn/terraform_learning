@@ -70,3 +70,20 @@ variable "content" {
     "statement2" = "we have learned successfully about map type variable declaration"
   }
 }
+
+# object variable type ---> VERY IMPORTANT
+
+variable "bella" {
+  type = object({
+    name = string
+    age = number
+    food = list
+    fav_pet = bool
+  })
+  default = {
+    name = "bella"
+    age = 10
+    food = ["chicken", "fish", "turkey"]
+    fav_pet = true
+  }
+}
