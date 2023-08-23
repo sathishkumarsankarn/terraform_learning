@@ -34,3 +34,23 @@ variable "fruits" {
   default = ["apple", "banana"]
   type = set(string)
 }
+# set type wont allow duplicate values
+variable "fruits" {
+  default = [1, 2, 3, 5]
+  type = set(number)
+}
+
+# list type allows duplicate values
+variable "fruits" {
+  default = ["apple", "banana", "apple"]
+  type = list(string)
+}
+
+# map type stores information in key value pairs
+variable "content" {
+  type = map
+  default = {
+    "statement1" = "We have variable with map type"
+    "statement2" = "we have learned successfully about map type variable declaration"
+  }
+}
