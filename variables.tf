@@ -102,3 +102,14 @@ variable "filename" {
 }
 # passing value in during run time like below -->
 terraform apply -var "filename=/root/sample.txt"
+
+export TF_VAR_filename="/root/pet.txt"
+
+terraform.tfvars
+filename = "/root/my-pet.txt"
+
+variable.auto.tfvars
+filename = "/root/fav-pet.txt"
+
+terraform apply -var "filename=/root/best-pet.txt"
+terraform apply -var-file variables.tfvars
