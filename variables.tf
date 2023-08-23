@@ -87,3 +87,10 @@ variable "bella" {
     fav_pet = true
   }
 }
+
+# tuple variable type 
+
+variable "kitty" {
+  type = tuple([string, number, bool])
+  default = ["cat", 1, true]
+}
