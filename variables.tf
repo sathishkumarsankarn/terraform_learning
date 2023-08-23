@@ -101,4 +101,4 @@ variable "kitty" {
 variable "filename" {
 }
 # passing value in during run time like below -->
-terraform apply -var filename="/root/sample.txt"
+terraform apply -var "filename=/root/sample.txt"
