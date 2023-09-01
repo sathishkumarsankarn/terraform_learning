@@ -14,6 +14,12 @@ terraform refresh             # if there is any manual change in resource, then 
 terraform plan -refresh=false      # This command will not perform refresh option. Note - refreshing state is default operation while executing plan and apply commands.
 terraform graph               # it shows the dependency in configuration file between resources in a graphical presentation
 
+terraform state
+terraform state show
+terraform state list
+terraform state rm
+terraform state mv <source> <destination>
+
 apt update
 apt install graphviz -y
 terraform graph | dot -Tsvg > graph.svg
