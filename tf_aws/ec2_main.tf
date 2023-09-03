@@ -19,6 +19,9 @@ resource "aws_instance" "webserver" {
                 "systemctl start nginx"
             ]
   }
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.webserver.public_ip} >> ip.txt
+  }
   connection {
     type = "ssh"
     host = self.public_ip
