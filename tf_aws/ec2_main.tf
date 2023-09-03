@@ -5,4 +5,11 @@ resource "aws_instance" "webserver" {
     Name = "webserver instances"
     description = "It is having Nginx Webserver"
   }
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo apt update
+              sudo apt install nginx -y
+              systemctl enable nginx
+              systemctl start nginx
+              EOF
 }
