@@ -19,8 +19,14 @@ resource "aws_instance" "webserver" {
                 "systemctl start nginx"
             ]
   }
-  provisioner "local-exec" {
-    command = "echo ${aws_instance.webserver.public_ip} >> ip.txt
+  provisioner "local-exec" { #create time local provisioner - after resource is created, then provisioner is executed.
+    command = "echo ${aws_instance.webserver.public_ip} >> ip.txt"
+  }
+  provisioner "local-exec" { #destroy time local provisioner
+    when = destroy
+    on_failure = fail or continue
+    command = "echo ${aws_instance.webserver.public_ip} >> ip.txt"
+
   }
   connection {
     type = "ssh"
