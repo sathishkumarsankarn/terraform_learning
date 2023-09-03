@@ -12,6 +12,19 @@ resource "aws_instance" "webserver" {
               systemctl enable nginx
               systemctl start nginx
               EOF
+  provisioner "remote-exec" {
+    inline = [ "sudo apt update",
+                "sudo apt install nginx -y",
+                "systemctl enable nginx",
+                "systemctl start nginx"
+            ]
+  }
+  connection {
+    type = "ssh"
+    host = self.public_ip
+    user = "ubuntu"
+    private_key = file("/root/.ssh/web")
+  }
   key_name = aws_key_pair.web.id
   vpc_security_group_ids = [ aws_security_group.ssh-access.id ]
 }
