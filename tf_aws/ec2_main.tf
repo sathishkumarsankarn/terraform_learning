@@ -12,9 +12,22 @@ resource "aws_instance" "webserver" {
               systemctl enable nginx
               systemctl start nginx
               EOF
+  key_name = aws_key_pair.web.id
 }
 
 
 resource "aws_key_pair" "web" {
   public_key = file("/root/.ssh/web.pub")
 }
+
+resource "aws_security_group" "ssh-access" {
+  name = "ssh-access"
+  description = "To connect EC2 Instances via SSH"
+  ingress {
+    from_port = 22
+    to_port = 22
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0./0"]
+  }
+}
+  
