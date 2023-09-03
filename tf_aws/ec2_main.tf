@@ -13,6 +13,7 @@ resource "aws_instance" "webserver" {
               systemctl start nginx
               EOF
   key_name = aws_key_pair.web.id
+  vpc_security_group_ids = [ aws_security_group.ssh-access.id ]
 }
 
 
