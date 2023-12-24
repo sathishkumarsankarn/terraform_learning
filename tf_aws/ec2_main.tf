@@ -1,5 +1,31 @@
+data "aws_ami" "amzlinx" {
+  most_recent      = true
+  owners           = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["al2023-ami-2023*"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+}
+
+
+
 resource "aws_instance" "webserver" {
-  ami = "ami-0823687123765"
+  ami = data.aws_ami.amzlinx.id
   instance_type = "t2.micro"
   tags = {
     Name = "webserver instances"
