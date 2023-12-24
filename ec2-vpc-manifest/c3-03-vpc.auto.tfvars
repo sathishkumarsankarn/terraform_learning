@@ -1,0 +1,9 @@
+# vpc_name = "${local.name}-myvpc"
+pub_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+pri_subnets = ["10.0.101.0/24", "10.0.102.0/24"]
+db_subnets = ["10.0.151.0/24", "10.0.152.0/24"]
+db_sub_group = true
+nat_gtw = true
+igtw = true
+dns_host = true
+dns_support = true
